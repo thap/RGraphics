@@ -1,0 +1,17 @@
+christian <- read.csv("E:/Twitter New/Result/Christian.Threshold.csv")
+muslim <- read.csv("E:/Twitter New/Result/Muslim.Threshold.csv")
+buddhist <- read.csv("E:/Twitter New/Result/Buddhist.Threshold.csv")
+
+opar <- par(no.readonly=T)
+par(mfrow=c(2,2))
+par(cex.lab=2,cex.axis=2,cex.main=2)
+par(family="serif")
+par(mar=c(4,6,4,1))
+plot(christian,xlab="Threshold",ylab="F1",main="(a) Christian")
+plot(muslim,xlab="Threshold",ylab="F1",main="(b) Muslim")
+plot(buddhist,xlab="Threshold",ylab="F1",main="(c) Buddhist")
+par(opar)
+
+rm(christian)
+rm(muslim)
+rm(buddhist)
